@@ -12,5 +12,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let vc = FlutterViewController(engine: appDelegate.flutterEngine, nibName: nil, bundle: nil)
     window?.rootViewController = vc
     window?.makeKeyAndVisible()
+
+    // Só regista os plugins depois de o FlutterViewController estar ligado ao motor.
+    GeneratedPluginRegistrant.register(with: appDelegate.flutterEngine)
   }
 }
