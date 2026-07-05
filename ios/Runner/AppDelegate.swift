@@ -10,7 +10,6 @@ import UIKit
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     flutterEngine.run()
-    GeneratedPluginRegistrant.register(with: flutterEngine)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 }
