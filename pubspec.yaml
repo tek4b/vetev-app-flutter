@@ -1,7 +1,7 @@
 name: vetevb4w
 description: Vetev - App de Transporte de Passageiros
 publish_to: 'none'
-version: 1.0.0+11
+version: 1.0.0+12
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -33,4 +33,3 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-
