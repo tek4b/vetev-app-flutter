@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
-  runApp(
-    const MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.blue,
-        body: Center(
-          child: Text(
-            'TESTE OK',
-            style: TextStyle(color: Colors.white, fontSize: 32),
-          ),
-        ),
+  runApp(const VetevApp());
+}
+
+class VetevApp extends StatelessWidget {
+  const VetevApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Vetev',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: const Color(0xFF00399e),
       ),
-    ),
-  );
+      home: const SplashScreen(),
+    );
+  }
 }
