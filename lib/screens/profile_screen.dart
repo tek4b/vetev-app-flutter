@@ -208,37 +208,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 child: const Icon(Icons.image_outlined, color: Color(0xFF00399e), size: 18),
                               ),
                             ),
-                            const SizedBox(width: 6),
-                            // Ver mapa
-                            GestureDetector(
-                              onTap: () {
-                                // TODO: navegar para mapa da paragem
-                              },
-                              child: Container(
-                                width: 36, height: 36,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFFf4f8ff),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: const Icon(Icons.map_outlined, color: Color(0xFF00399e), size: 18),
-                              ),
-                            ),
-                            if (_latParagem != 0 && _lonParagem != 0) ...[
-                              const SizedBox(width: 6),
-                              GestureDetector(
-                                onTap: () {
-                                  // TODO: abrir Google Maps com direções
-                                },
-                                child: Container(
-                                  width: 36, height: 36,
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xFFf4f8ff),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  child: const Icon(Icons.directions_outlined, color: Color(0xFF00399e), size: 18),
-                                ),
-                              ),
-                            ],
                           ],
                         ),
 
@@ -290,40 +259,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           }).toList(),
                         ),
                       ],
-                    ),
-                  ),
-
-                  const SizedBox(height: 12),
-
-                  // Botão Ajuda / Tutorial
-                  GestureDetector(
-                    onTap: () {
-                      // TODO: abrir PDF tutorial
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 12)],
-                      ),
-                      child: const Row(
-                        children: [
-                          Icon(Icons.help_outline, color: Color(0xFF00399e)),
-                          SizedBox(width: 12),
-                          Text(
-                            'Ajuda / Tutorial',
-                            style: TextStyle(
-                              color: Color(0xFF00399e),
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Spacer(),
-                          Icon(Icons.chevron_right, color: Colors.grey),
-                        ],
-                      ),
                     ),
                   ),
 

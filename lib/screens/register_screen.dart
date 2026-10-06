@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:url_launcher/url_launcher.dart';
 import 'login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -85,12 +86,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  void _openPrivacyPolicy() async {
-    final prefs = await SharedPreferences.getInstance();
-    final baseUrl = prefs.getString('base_url') ?? 'http://vetevb4w.pt/';
-    final idEmpresa = prefs.getInt('idEmpresa') ?? 1;
-    final url = '${baseUrl}QrCodes/$idEmpresa/politica_privacidade.pdf';
-    // TODO: abrir PDF com flutter_pdfview
+  Future<void> _openPrivacyPolicy() async {
+    final uri = Uri.parse('https://vetev.pt/privacy-policy/');
+    final ok = await launchUrl(uri, mode: LaunchMode.externalApplication);
+    if (!ok && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Não foi possível abrir a política de privacidade.'),
+        ),
+      );
+    }
   }
 
   Future<void> _registar() async {

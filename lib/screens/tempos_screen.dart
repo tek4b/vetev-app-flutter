@@ -379,25 +379,6 @@ class _TemposScreenState extends State<TemposScreen> {
                 ),
               ),
 
-              // Ícone localizar bus
-              GestureDetector(
-                onTap: temNd
-                    ? null
-                    : () {
-                        // TODO: abrir mapa da viatura
-                      },
-                child: Opacity(
-                  opacity: temNd ? 0.3 : 1.0,
-                  child: const Icon(
-                    Icons.directions_bus,
-                    color: Color(0xFF00399e),
-                    size: 22,
-                  ),
-                ),
-              ),
-
-              const SizedBox(width: 12),
-
               // Tempo estimado
               Text(
                 tempo,

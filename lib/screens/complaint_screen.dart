@@ -435,46 +435,6 @@ class _ComplaintScreenState extends State<ComplaintScreen> {
 
                         const SizedBox(height: 16),
 
-                        // Anexos
-                        _buildLabel('ANEXOS'),
-                        const SizedBox(height: 8),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                // TODO: anexar ficheiro
-                              },
-                              child: Container(
-                                width: 44, height: 44,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFFf4f8ff),
-                                  borderRadius: BorderRadius.circular(12),
-                                  border: Border.all(color: const Color(0xFFd0e4ff)),
-                                ),
-                                child: const Icon(Icons.attach_file, color: Color(0xFF00399e), size: 20),
-                              ),
-                            ),
-                            const SizedBox(width: 8),
-                            GestureDetector(
-                              onTap: () {
-                                // TODO: tirar foto
-                              },
-                              child: Container(
-                                width: 44, height: 44,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFFf4f8ff),
-                                  borderRadius: BorderRadius.circular(12),
-                                  border: Border.all(color: const Color(0xFFd0e4ff)),
-                                ),
-                                child: const Icon(Icons.camera_alt_outlined, color: Color(0xFF00399e), size: 20),
-                              ),
-                            ),
-                          ],
-                        ),
-
-                        const SizedBox(height: 16),
-
                         // Descrição
                         _buildLabel('DESCRIÇÃO'),
                         const SizedBox(height: 8),
